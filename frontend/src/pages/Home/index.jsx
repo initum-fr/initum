@@ -148,20 +148,10 @@ export default function Home() {
                                             </p>
                                             <p>
                                                 <Link
+                                                    target="_blank"
                                                     to={person.linkedin}
                                                     className="bi bi-linkedin text-md text-black"
                                                 ></Link>
-                                            </p>
-                                            <p>
-                                                <Link
-                                                    to="/team"
-                                                    className="text-sm font-semibold leading-6 text-gray-900"
-                                                >
-                                                    En savoir plus{' '}
-                                                    <span aria-hidden="true">
-                                                        →
-                                                    </span>
-                                                </Link>
                                             </p>
                                             <p class="mt-2">
                                                 <Link
