@@ -1,19 +1,21 @@
 import PPYassine from '../../assets/pp_yassine.png'
 import PPAbubakar from '../../assets/pp_abubakar.png'
 import { Link } from 'react-router-dom'
+import TeamCard from '../../components/TeamCard'
 
 const people = [
     {
         name: 'Yassine ANZAR BASHA',
-        role: 'Fondateur & Développeur Full Stack',
+        role: 'Développeur Full-Stack',
         imageUrl: PPYassine,
-        description: 'Passionné par le développement web et mobile.',
+        description:
+            "Passionné par l'entrepreneuriat et les nouvelles technologies. J'aime créer des solutions innovantes afin d'optimiser les processus des entreprises et améliorer l'expérience utilisateur.",
         linkedin: 'https://linkedin.com/in/yanzarbasha',
         stack: ['React', 'NodeJS', 'Express', 'MongoDB', 'SQL'],
     },
     {
         name: 'Abubakar ALIEV',
-        role: 'Co-Foundateur & Développeur Back-End',
+        role: 'Développeur Back-End',
         imageUrl: PPAbubakar,
         description: 'Passionné par les données et Python.',
         linkedin: 'https://www.linkedin.com/in/alieva/',
@@ -42,43 +44,9 @@ export default function About() {
                     <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                         Notre équipe
                     </h2>
-                    <div className="my-5 grid justify-center gap-y-5">
-                        {people.map((person, index) => (
-                            <div
-                                key={index}
-                                className="flex items-center gap-x-4"
-                            >
-                                <img
-                                    src={person.imageUrl}
-                                    alt={person.name}
-                                    className="w-32 rounded-3xl grayscale filter"
-                                />
-                                <div className="grid gap-y-2">
-                                    <h3 className="text-xl font-bold text-gray-900">
-                                        {person.name}
-                                    </h3>
-                                    <p className="text-gray-800">
-                                        {person.role}
-                                    </p>
-                                    <p className="flex gap-x-1 text-gray-600">
-                                        {person.stack.map((stack, index) => (
-                                            <span
-                                                key={index}
-                                                class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-[#171716] ring-1 ring-inset ring-blue-700/10"
-                                            >
-                                                {stack}
-                                            </span>
-                                        ))}
-                                    </p>
-                                    <p>
-                                        <Link
-                                            target="_blank"
-                                            to={person.linkedin}
-                                            className="bi bi-linkedin text-2xl text-[#171716]"
-                                        ></Link>
-                                    </p>
-                                </div>
-                            </div>
+                    <div className="my-5 grid grid-cols-2 justify-center gap-x-5 gap-y-5">
+                        {people.map((person) => (
+                            <TeamCard key={person.linkedin} person={person} />
                         ))}
                     </div>
                     <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
