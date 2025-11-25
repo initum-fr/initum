@@ -129,8 +129,8 @@ const Root = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 class="text-3xl font-bold tracking-tight  sm:text-4xl">
+                        <div className="hidden">
+                            <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
                                 S'inscrire à la newsletter
                             </h2>
                             <p class="mt-4 text-lg leading-8 text-gray-300">
