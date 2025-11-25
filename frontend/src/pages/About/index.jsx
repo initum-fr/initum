@@ -44,7 +44,7 @@ export default function About() {
                     <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                         Notre équipe
                     </h2>
-                    <div className="my-5 grid grid-cols-2 justify-center gap-x-5 gap-y-5">
+                    <div className="my-5 grid justify-center gap-x-5 gap-y-5 lg:grid-cols-2">
                         {people.map((person) => (
                             <TeamCard key={person.linkedin} person={person} />
                         ))}
